@@ -539,7 +539,6 @@ function part2(input) {
     input.forEach(element => {
         let set = new Set();
         let words = element.split(" ");
-        console.log(words);
         for(let i = 0; i < words.length; i++) {
             let temp = words[i].split("").sort().join("");
             if(set.has(temp)) {

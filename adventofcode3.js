@@ -87,7 +87,7 @@ function part2(input) {
             y--;
         }
         else {
-            console.log("wrong direction: " + direction);
+            console.log("Error: Wrong direction, " + direction);
         }
     }
     // Manually set the first 4 points and initial values

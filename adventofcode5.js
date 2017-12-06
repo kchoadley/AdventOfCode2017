@@ -1040,7 +1040,6 @@ function part1(input) {
     let current = 0;
     let move = 0;
     let copy_of_input = input.slice();
-    console.log(copy_of_input);
     while(current < copy_of_input.length){
         solution++;
         move = parseInt(copy_of_input[current]);

@@ -20,7 +20,6 @@ let input = `
 
 let regex = /([0-9]){1,}/g;
 let parsed = input.match(regex);
-console.log(parsed);
 
 function part1(input) {
     let solution = 0;
@@ -39,7 +38,6 @@ function part1(input) {
             pointer++;
         }
         solution += max-min;
-        console.log(solution);
     }
     return solution;
 }
@@ -56,7 +54,6 @@ function part2(input) {
             pointer++;
         }
         line.sort(function(a, b){return b-a});
-        //console.log(line);
         var remainder = null;
         for(let i = 0; i < line.length - 1; i++) {
             for(let j = i+1; j < line.length; j ++) {
@@ -64,14 +61,12 @@ function part2(input) {
                 let b = line[j];
                 remainder = a%b;
                 if(remainder == 0) {
-                    console.log("found a new dividend: " + a/b)
                     solution += a/b;
                     break;
                 }
             }
             if(remainder == 0) { break; }
         }
-        console.log(solution);
     }
     return solution;
 }

@@ -26,7 +26,6 @@ function part1(input) {
         banks[chosen] = 0;
 
         while(redistribute > 0) {
-            console.log(banks.length)
             if(chosen >= banks.length-1) { chosen = 0; }
             else { chosen++; }
             banks[chosen] = banks[chosen] + 1;
@@ -56,7 +55,6 @@ function part2(input) {
         banks[chosen] = 0;
 
         while(redistribute > 0) {
-            console.log(banks.length)
             if(chosen >= banks.length-1) { chosen = 0; }
             else { chosen++; }
             banks[chosen] = banks[chosen] + 1;
@@ -81,7 +79,6 @@ function part2(input) {
         banks[chosen] = 0;
 
         while(redistribute > 0) {
-            console.log(banks.length)
             if(chosen >= banks.length-1) { chosen = 0; }
             else { chosen++; }
             banks[chosen] = banks[chosen] + 1;

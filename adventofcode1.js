@@ -20,7 +20,6 @@ function part2(input) {
   for (let i = 0; i < (input.length / 2); i++) {
     if (input.charAt(i) == input.charAt(i + diff)) {
       solution2 += parseInt(input.charAt(i)) * 2;
-      console.log(solution2);
     }
   }
   return solution2;
