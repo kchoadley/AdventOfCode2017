@@ -535,6 +535,21 @@ function part1(input) {
 
 function part2(input) {
     let solution = 0;
+    let invalid = 0;
+    input.forEach(element => {
+        let set = new Set();
+        let words = element.split(" ");
+        console.log(words);
+        for(let i = 0; i < words.length; i++) {
+            let temp = words[i].split("").sort().join("");
+            if(set.has(temp)) {
+                invalid++;
+                break;
+            }
+            set.add(temp);
+        }
+    });
+    solution = input.length - invalid;
     return solution;
 }
 let solution = part1(input);
