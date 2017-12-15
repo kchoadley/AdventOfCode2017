@@ -1,8 +1,7 @@
 "use strict"
 let input = `189,1,111,246,254,2,0,120,215,93,255,50,84,15,94,62`
-let test = `1,2,3`
 
-let input2 = test.split("");
+let input2 = input.split("");
 input = input.split(",");
 for(let i = 0; i < input.length; i++){
     input[i] = parseInt(input[i]);
@@ -10,7 +9,6 @@ for(let i = 0; i < input.length; i++){
 for(let i = 0; i < input2.length; i++){
     input2[i] = input2[i].charCodeAt(0);
 }
-console.log(input2);
 
 
 function List(size) {
@@ -55,9 +53,11 @@ function part2(input) {
             pos += element+skip++;
         });
     }
-    console.log(list);
     for(let i = 0; i < list.length; i+=16) {
-        solution[i/16] = (list[i] ^list[i+1] ^list[i+2] ^list[i+3] ^list[i+4] ^list[i+5] ^list[i+6] ^list[i+7] ^list[i+8] ^list[i+9] ^list[i+10] ^list[i+11] ^list[+12] ^list[i+13] ^list[i+14] ^list[i+15]);
+        solution[i/16] = 0;
+        for (let j = 0; j < 16; j++) {
+            solution[i/16] = solution[i/16] ^ list[i + j];
+        }
     }
     for(let i = 0; i < solution.length; i++) {
         solution[i] = solution[i].toString(16);
