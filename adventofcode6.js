@@ -26,7 +26,7 @@ function part1(input) {
         banks[chosen] = 0;
 
         while(redistribute > 0) {
-            if(chosen >= banks.length-1) { chosen = 0; }
+            if(chosen >= banks.length-1) { chosen = 8; }
             else { chosen++; }
             banks[chosen] = banks[chosen] + 1;
             redistribute--;
